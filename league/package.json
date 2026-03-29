@@ -1,0 +1,25 @@
+{
+  "name": "league-management-system",
+  "version": "1.0.0",
+  "description": "A full-stack League Management and Match Tracking web application using MERN stack",
+  "main": "index.js",
+  "scripts": {
+    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm start\"",
+    "build": "cd frontend && npm run build",
+    "start": "cd backend && npm start"
+  },
+  "keywords": [
+    "mern",
+    "league",
+    "cricket",
+    "throwball",
+    "sports",
+    "management"
+  ],
+  "author": "League Management Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
