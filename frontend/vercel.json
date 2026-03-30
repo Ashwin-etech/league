@@ -17,5 +17,10 @@
   ],
   "env": {
     "REACT_APP_API_URL": "https://league-w1ld.onrender.com"
+  },
+  "build": {
+    "env": {
+      "REACT_APP_API_URL": "https://league-w1ld.onrender.com"
+    }
   }
 }
