@@ -1,12 +1,7 @@
 {
-  "version": 2,
-  "framework": null,
-  "buildCommand": "cd frontend && npm run build",
+  "buildCommand": "npm run build",
   "outputDirectory": "frontend/build",
-  "installCommand": "npm install",
-  "build": {
-    "env": {
-      "REACT_APP_API_URL": "https://league-w1ld.onrender.com"
-    }
+  "env": {
+    "REACT_APP_API_URL": "https://league-w1ld.onrender.com"
   }
 }
