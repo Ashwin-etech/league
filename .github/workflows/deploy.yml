@@ -73,14 +73,18 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     
-    - name: Deploy to Vercel
-      uses: amondnet/vercel-action@v20
+    - name: Deploy to Netlify
+      uses: nwtgck/actions-netlify@v2
       with:
-        vercel-token: ${{ secrets.VERCEL_TOKEN }}
-        vercel-org-id: ${{ secrets.ORG_ID }}
-        vercel-project-id: ${{ secrets.PROJECT_ID }}
-        vercel-args: '--prod'
-        working-directory: ./frontend
+        publish-dir: './frontend/build'
+        production-branch: main
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        deploy-message: "Deploy from GitHub Actions"
+        enable-pull-request-comment: false
+        enable-commit-comment: false
+      env:
+        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
 
   notify:
     needs: [deploy-backend, deploy-frontend]
@@ -92,4 +96,4 @@ jobs:
       run: |
         echo "🚀 Deployment completed successfully!"
         echo "Backend: https://league-api.onrender.com"
-        echo "Frontend: https://league-frontend.vercel.app"
+        echo "Frontend: https://league-frontend.netlify.app"
