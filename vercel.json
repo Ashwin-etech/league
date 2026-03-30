@@ -1,8 +1,8 @@
 {
   "version": 2,
   "framework": null,
-  "buildCommand": "npm run build",
-  "outputDirectory": "build",
+  "buildCommand": "cd frontend && npm run build",
+  "outputDirectory": "frontend/build",
   "installCommand": "npm install",
   "build": {
     "env": {
