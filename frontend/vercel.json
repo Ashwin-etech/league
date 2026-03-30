@@ -1,5 +1,12 @@
 {
+  "version": 2,
+  "framework": "create-react-app",
   "buildCommand": "npm run build",
   "outputDirectory": "build",
-  "installCommand": "npm install"
+  "installCommand": "npm install",
+  "build": {
+    "env": {
+      "REACT_APP_API_URL": "https://league-w1ld.onrender.com"
+    }
+  }
 }
